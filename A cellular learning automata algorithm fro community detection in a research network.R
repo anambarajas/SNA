@@ -10,7 +10,7 @@ library("openxlsx")
 
 #Importar datos de excel y asignarlos a un data frame
 
-Articulos_1161 <- read_excel("C:/Users/baraj/Dropbox/TG/Libro/Documento libro/TRABAJO DE GRADO/Apéndices/Apéndice B Articulos 1161.xlsx", col_names = FALSE)
+Articulos_1161 <- read_excel("C:/Users/baraj/Dropbox/TG/Libro/Documento libro/TRABAJO DE GRADO/ApÃ©ndices/ApÃ©ndice B Articulos 1161.xlsx", col_names = FALSE)
 autores<-data.frame(Articulos_1161)
 lista_arcos<-data.frame(autor=character(),coautor=character())
 m<-ncol(autores)
@@ -433,9 +433,9 @@ for(i in 1:cmax) {
 write.graph(grafoautores_num, "Grafo966.gml", format = c("gml"))  
 
 
-#Encontrar lideres de cada comunidad, cargando pestaña lider del documento info pares
+#Encontrar lideres de cada comunidad, cargando pestaÃ±a lider del documento info pares
 
-Datos_ARS <- read_excel("C:/Users/baraj/Dropbox/TG/Libro/Documento libro/TRABAJO DE GRADO/Apéndices/Apendice C Información Pares.xlsx", sheet = "Lider")
+Datos_ARS <- read_excel("C:/Users/baraj/Dropbox/TG/Libro/Documento libro/TRABAJO DE GRADO/ApÃ©ndices/Apendice C InformaciÃ³n Pares.xlsx", sheet = "Lider")
 Datos_lideres <- data.frame(Datos_ARS)
 Lideres <- Datos_lideres
 
@@ -505,8 +505,8 @@ comunidades_rand <- sample(1:63,5)
 
 #copublicaciones promedio
 
-copub <- read_excel("C:/Users/baraj/Dropbox/TG/Libro/Documento libro/TRABAJO DE GRADO/Apéndices/Apéndice D Info copublicaciones.xlsx")
-dist_copublicaciones <- hist(copub$`Número de copublicaciones`, xlim = c(1, 110), xlab = "Numero de copublicaciones", ylab = "Frecuencia", main = "Distribucion de frecuencia de las co-publicaciones por autor", nclass = 10, labels = TRUE,col = "gray" )
+copub <- read_excel("C:/Users/baraj/Dropbox/TG/Libro/Documento libro/TRABAJO DE GRADO/ApÃ©ndices/ApÃ©ndice D Info copublicaciones.xlsx")
+dist_copublicaciones <- hist(copub$`NÃºmero de copublicaciones`, xlim = c(1, 110), xlab = "Numero de copublicaciones", ylab = "Frecuencia", main = "Distribucion de frecuencia de las co-publicaciones por autor", nclass = 10, labels = TRUE,col = "gray" )
 
 #coautores promedio
 
